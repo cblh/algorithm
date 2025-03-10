@@ -225,7 +225,7 @@ export const builtInLang = [CodeLang.JavaScript, CodeLang.TypeScript]
 export const otherLang = [CodeLang.Python3, CodeLang.Go, CodeLang.Java, CodeLang['C++']]
 export const enableLang = [...builtInLang, ...otherLang]
 export const databases = [DataBase['MS SQL Server'], DataBase.MySQL, DataBase.Oracle]
-export const enNameLangs = [CodeLang.Java, CodeLang['C++']]
+export const enNameLangs = [CodeLang.Java, CodeLang['C++'], CodeLang.TypeScript]
 export enum ExtraType {
 	ListNode = 'ListNode',
 	TreeNode = 'TreeNode',

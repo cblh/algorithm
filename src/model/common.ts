@@ -163,15 +163,14 @@ export type UpdateRemoteCommentOption = Omit<UpdateCommentOption, 'questionId'>
 
 type Requred<T, R extends keyof T> = {
 	[key in R]-?: T[key]
-} &
-	{
-		[key in keyof T]: T[key]
-	}
+} & {
+	[key in keyof T]: T[key]
+}
 export function checkParams<T, R extends keyof T>(obj: T, attrs: R[]): asserts obj is Requred<T, R> {
 	const verify = attrs.every((attr) => !!obj[attr])
 	if (!verify) {
 		const attr = attrs.find((attr) => !obj[attr])!
-		throw new Error(`options error, ${attr} is ${obj[attr]}`)
+		throw new Error(`options error, ${String(attr)} is ${obj[attr]}`)
 	}
 }
 
